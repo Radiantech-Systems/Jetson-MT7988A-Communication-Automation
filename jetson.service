@@ -1,0 +1,13 @@
+[Unit]
+Description=Jetson TCP Communication Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/<root>/Jetson-MT7988A-TCP-Communication/jetson
+ExecStart=/home/<root>/Jetson-MT7988A-TCP-Communication/jetson/run_server.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
